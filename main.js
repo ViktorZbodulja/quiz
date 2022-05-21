@@ -16,6 +16,19 @@ questionsData.forEach((q) => {
     div.setAttribute("class", "question");
     document.body.append(div);
 
-    const h2 = document.createElement;
-})
+    const h2 = document.createElement("h2");
+    h2.innerHTML = q.question;
+    div.append(h2);
+
+    // console.log(q.options);
+
+    q.options.forEach((option) => {
+        const button = document.createElement("button");
+        button.setAttribute("class", "option");
+        button.innerHTML = option;
+        div.append(button)
+    })
+
+
+});
    
